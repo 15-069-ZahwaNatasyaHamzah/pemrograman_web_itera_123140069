@@ -50,8 +50,6 @@ Aplikasi ini menggunakan `localStorage` untuk menyimpan semua data pengguna.
 
 ## 📸 Screenshot Aplikasi
 
-*(Ambil screenshot aplikasi Anda dan letakkan di sini. Anda bisa drag-and-drop file gambar ke folder proyek dan ganti nama file di bawah)*
-
 ![Screenshot Dashboard Mahasiswa](ss 1.jpg)
 ![Screenshot Dashboard Mahasiswa](ss 2.jpg)
 ![Screenshot Dashboard Mahasiswa](ss 3.jpg)
