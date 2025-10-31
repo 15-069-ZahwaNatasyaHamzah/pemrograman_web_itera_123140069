@@ -1,0 +1,228 @@
+/* =========================================
+   Reset & Font
+   ========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: #f0f8ff; /* Latar belakang AliceBlue (soft blue) */
+    color: #333;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+/* =========================================
+   Header (Welcome Card) - INI STYLE BARU
+   ========================================= */
+.welcome-header {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    padding: 1.25rem 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    
+    /* Menyelaraskan dengan grid di bawah */
+    max-width: 1400px;
+    /* Margin: 2rem atas, auto kiri-kanan, 0 bawah */
+    margin: 2rem auto 0 auto; 
+}
+
+.welcome-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: #0ea5e9; 
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    font-weight: 600;
+    flex-shrink: 0;
+}
+
+.welcome-text-container h2 {
+    font-size: 1.5rem; /* Ukuran "Selamat datang, Zahwa!" */
+    font-weight: 600;
+    color: #222;
+    margin: 0;
+    padding: 0;
+    border: none; /* Menimpa style h2 global */
+}
+
+.welcome-text-container p {
+    font-size: 0.95rem; /* Ukuran "Atur tugas..." */
+    color: #555;
+    margin: 0;
+}
+
+/* h1 (header lama) sudah dihapus */
+
+h2 {
+    /* Style ini untuk judul di dalam widget (Jadwal, Tugas, dll) */
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #0ea5e9; /* Aksen Sky Blue */
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #eee;
+}
+
+/* =========================================
+   Layout Grid - INI DIMODIFIKASI
+   ========================================= */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 1.5rem;
+    /* Padding: 0 atas, 2rem kiri-kanan, 2rem bawah */
+    padding: 0 2rem 2rem 2rem; 
+    max-width: 1400px;
+    /* Margin: 1.5rem atas (jarak dari header), auto, 0 */
+    margin: 1.5rem auto 0 auto;
+}
+
+/* =========================================
+   Widget Styling (Clean White Cards)
+   ========================================= */
+.widget {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.widget:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* =========================================
+   Styling Elemen di dalam Widget
+   ========================================= */
+
+/* Widget Waktu */
+#waktu-display {
+    text-align: center;
+    padding: 0.5rem 0;
+}
+#waktu-display .tanggal {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #444;
+}
+#waktu-display .waktu {
+    font-size: 2.5rem; /* Jam lebih besar */
+    font-weight: 600;
+    color: #0ea5e9; /* Aksen Biru */
+    letter-spacing: 1px;
+    margin: 0.5rem 0;
+}
+#waktu-display .zona {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+/* Widget Jadwal Kuliah (Styling Baru) */
+#jadwal-list li {
+    background-color: #fafafa;
+    padding: 1rem;
+    margin-bottom: 0.75rem;
+    border-radius: 8px;
+    border: 1px solid #eee;
+}
+#jadwal-list .hari {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #222;
+}
+#jadwal-list .matkul {
+    margin-top: 0.5rem;
+    display: block;
+    font-size: 0.95rem;
+}
+#jadwal-list .waktu-lokasi {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* Form, Input, & Button */
+#tugas-form {
+    display: flex;
+    margin-bottom: 1rem;
+    gap: 0.5rem;
+}
+
+#tugas-input,
+#catatan-area {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fdfdfd;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#tugas-input:focus,
+#catatan-area:focus {
+    outline: none;
+    border-color: #0ea5e9;
+    box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.1);
+}
+
+#catatan-area {
+    min-height: 200px;
+    resize: vertical;
+}
+
+/* Tombol */
+button {
+    padding: 0.75rem 1rem;
+    border: none;
+    background-color: #0ea5e9; /* Aksen Sky Blue */
+    color: #ffffff;
+    cursor: pointer;
+    border-radius: 8px;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+button:hover {
+    background-color: #0c8ac7; /* Biru lebih gelap */
+    transform: translateY(-2px);
+}
+button:active {
+    transform: translateY(0);
+}
+
+#tugas-form button {
+    flex-shrink: 0;
+}
+#simpan-catatan {
+    margin-top: 0.5rem;
+    width: 100%;
+}
+
+/* Tombol Hapus */
+.hapus-tugas {
+    background-color: #e74c3c;
+    color: #ffffff;
+    padding: 0.3rem 0.6rem;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+.hapus-tugas:hover {
+    background-color: #c0392b;
+    transform: none;
+}
