@@ -21,33 +21,6 @@ Aplikasi dashboard interaktif untuk mengelola daftar tugas dan jadwal kuliah mah
 
 ---
 
-## 🛠️ Persyaratan ES6+ yang Terpenuhi
-
-Proyek ini dibuat dengan memenuhi semua kriteria tugas, termasuk:
-
-| Fitur ES6+ | Contoh Implementasi | Status |
-|-----------|---------------------|--------|
-| `let` & `const` | `let tasks = ...`, `const taskForm = ...` | ✅ |
-| Arrow Function (≥3) | `const renderTasks = () => {...}`, `taskForm.addEventListener('submit', (e) => {...})` | ✅ |
-| Template Literals | Digunakan di `renderTasks()` dan `renderSchedules()` untuk membuat elemen list | ✅ |
-| Fungsi Async/Await | *(Diganti)*: `setInterval` (sebuah operasi *asynchronous*) digunakan untuk jam. | ✅ |
-| Classes | `class Task`, `class Schedule`, `class Storage` untuk mengelola data | ✅ |
-
----
-
-## 💾 Penyimpanan Data (localStorage)
-
-Aplikasi ini menggunakan `localStorage` untuk menyimpan semua data pengguna.
-
-* **Key:** `tasks`
-    * **Deskripsi:** Menyimpan array objek daftar tugas (termasuk status selesai).
-* **Key:** `schedules`
-    * **Deskripsi:** Menyimpan array objek jadwal kuliah.
-* **Key:** `darkMode`
-    * **Deskripsi:** Menyimpan status tema (`true` atau `false`).
-
----
-
 ## 📸 Screenshot Aplikasi
 
 ![Screenshot Dashboard Mahasiswa](ss 1.jpg)
@@ -69,3 +42,4 @@ Aplikasi ini menggunakan `localStorage` untuk menyimpan semua data pengguna.
     * Klik ikon ✏️ untuk memuat data ke form (untuk diedit lalu ditambah lagi).
     * Klik ikon 🗑️ untuk menghapus.
 4.  Aktifkan *dark mode* menggunakan *toggle* di bagian *footer*.
+
