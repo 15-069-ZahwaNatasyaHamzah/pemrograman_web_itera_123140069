@@ -23,9 +23,9 @@ Aplikasi ini memiliki 4 widget utama:
 
 ## Screenshot Aplikasi
 
-![Screenshot Dashboard Zahwa 1](ss 1.jpg)
-![Screenshot Dashboard Zahwa 2](ss 2.jpg)
-![Screenshot Dashboard Zahwa 3](ss 3.jpg)
+![Screenshot Dashboard Zahwa 1](ss1.jpg)
+![Screenshot Dashboard Zahwa 2](ss2.jpg)
+![Screenshot Dashboard Zahwa 3](ss3.jpg)
 
 ## Daftar Fitur ES6+ yang Diimplementasikan
 
@@ -46,5 +46,6 @@ Sesuai persyaratan, proyek ini mengimplementasikan fitur-fitur ES6+ berikut:
 
 5.  **Classes:**
     * Sebuah `class Tugas` dibuat untuk mendefinisikan *blueprint* atau struktur data dari setiap item tugas, yang berisi `id` dan `teks`.
+
 
 
