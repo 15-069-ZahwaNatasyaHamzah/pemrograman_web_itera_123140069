@@ -1,6 +1,6 @@
 # 📝 Aplikasi Manajemen Tugas Mahasiswa
 ## Deskripsi Singkat
-Aplikasii ini dibuat untuk membantu mahasiswa mengelola aktivitas akademik mereka seperti tugas kuliah. Pengguna dapat menambahkan, mengedit, menandai selesai, dan menghapus tugas secara interaktif. Semua data tersimpan lokal di browser menggunakan localStorage, sehingga data tidak hilang meskipun halaman direfresh.
+Aplikasi ini dibuat untuk membantu mahasiswa mengelola aktivitas akademik mereka seperti tugas kuliah. Pengguna dapat menambahkan, mengedit, menandai selesai, dan menghapus tugas secara interaktif. Semua data tersimpan lokal di browser menggunakan localStorage, sehingga data tidak hilang meskipun halaman direfresh.
 ## Screenshoot Aplikasi
 ### 1. Tampilan Awal
 ![Gambar WhatsApp 2025-10-23 pukul 06 48 10_f32f6ab2](https://github.com/user-attachments/assets/6debc4d4-31c8-40c5-bc7d-8bc89dc5ba4f)
