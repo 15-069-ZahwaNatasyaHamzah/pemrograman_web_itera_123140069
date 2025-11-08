@@ -1,6 +1,6 @@
 # 📘 Personal Dashboard Sederhana
 
-Aplikasi dashboard personal sederhana untuk menampilkan jadwal kuliah, catatan, dan mengelola daftar tugas harian. Semua data interaktif (tugas dan catatan) disimpan menggunakan `localStorage`.
+Aplikasii dashboard personal sederhana untuk menampilkan jadwal kuliah, catatan, dan mengelola daftar tugas harian. Semua data interaktif (tugas dan catatan) disimpan menggunakan `localStorage`.
 
 ---
 
