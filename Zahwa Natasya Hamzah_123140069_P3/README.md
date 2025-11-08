@@ -43,3 +43,50 @@ Pastikan Anda memiliki [Node.js](https://nodejs.org/) (versi LTS).
 Untuk menjalankan aplikasi dalam mode development (pengembangan):
 ```bash
 npm run dev
+
+Aplikasi akan terbuka di browser pada alamat `http://localhost:5173` (atau port lain yang ditampilkan di terminal).
+
+---
+
+## 💡 Penjelasan Fitur React yang Digunakan
+
+Aplikasi ini dibangun dengan memanfaatkan beberapa fitur inti dan modern React untuk menciptakan aplikasi yang efisien dan mudah dikelola:
+
+### React Router (v6)
+
+**Fungsi:** Digunakan untuk mengelola navigasi client-side (perpindahan antar halaman).
+
+**Penerapan:** Memungkinkan aplikasi memiliki beberapa "halaman" (seperti Home dan Statistik) yang diakses melalui URL berbeda tanpa memuat ulang seluruh halaman web. Ini menciptakan pengalaman pengguna yang cepat dan mulus.
+
+### Context API
+
+**Fungsi:** Digunakan untuk manajemen state global.
+
+**Penerapan:** Alih-alih meneruskan props (seperti daftar buku atau fungsi `handleTambahBuku`) secara berulang-ulang ke komponen-komponen anak (dikenal sebagai "prop drilling"), Context API menyediakan state global. Dalam proyek ini, Context digunakan untuk menyimpan daftar buku, sehingga komponen `BookList` dan `StatsPage` bisa mengakses data yang sama tanpa perlu props yang rumit.
+
+### Custom Hooks
+
+**Fungsi:** Untuk mengenkapsulasi dan menggunakan kembali logika yang memiliki state (stateful logic).
+
+**Penerapan:** (Contoh) Logika untuk menyimpan dan mengambil data buku dari Local Storage kemungkinan diabstraksi ke dalam custom hook (misalnya `useLocalStorage`). Ini membuat komponen utama (seperti `App.js`) lebih bersih dan fokus pada tampilan, sementara logika penyimpanan data ditangani secara terpisah oleh hook ini.
+
+### React Hooks (useState, useEffect)
+
+* `useState` digunakan untuk mengelola state lokal di dalam komponen, seperti mengelola data input pada form tambah/edit buku dan state untuk query pencarian.
+* `useEffect` digunakan untuk menangani side effects, seperti menyimpan data ke Local Storage setiap kali daftar buku berubah.
+
+---
+
+## 💬 Komentar dalam Kode
+
+Komentar penjelasan telah ditambahkan di seluruh basis kode pada bagian-bagian yang dianggap penting atau kompleks.
+
+* Komentar ini menjelaskan tujuan dari komponen-komponen utama.
+* Menjelaskan logika di dalam fungsi-fungsi (seperti fungsi edit, hapus, atau filter).
+* Memberikan konteks untuk struktur state yang digunakan dalam Context API.
+
+Tujuan dari komentar ini adalah untuk membuat kode lebih mudah dibaca, dipahami, dan dipelihara oleh developer lain (atau diri sendiri di masa depan).
+
+---
+
+## 🧪 Laporan Testing (Screenshots Hasil Test)
