@@ -1,6 +1,6 @@
 # Aplikasi Manajemen Buku Pribadi
 
-Aplikasi web React sederhana untuk mengelola koleksi buku pribadi, dibuat sebagai tugas praktikum.
+Aplikasi React untuk mengelola koleksi buku pribadi. Pengguna bisa menambahkan, memperbarui, dan menghapus entri buku serta menyaring koleksi berdasarkan status (Dimiliki, Sedang Dibaca, Ingin Dibeli). Dibangun sebagai latihan untuk mempraktikkan fitur React modern: Context API, custom hooks, dan React Router.
 
 ## 🚀 Deskripsi Aplikasi
 
@@ -14,12 +14,12 @@ Aplikasi ini memungkinkan pengguna untuk:
 
 ## 📸 Screenshot Antarmuka
 
-*Catatan: Ambil screenshot aplikasi Anda yang sudah berjalan dan letakkan di sini.*
-
 **Halaman Home**
-
+![buku1](https://github.com/user-attachments/assets/ccbbb24e-a016-436c-9a53-e9b0eebeb010)
+![buku2](https://github.com/user-attachments/assets/479d2b5e-7cac-48b6-a8b8-58c78cb183ab)
 
 **Halaman Statistik**
+![buku3](https://github.com/user-attachments/assets/459fa8fa-774c-4a90-acbd-ac4562937035)
 
 
 ---
