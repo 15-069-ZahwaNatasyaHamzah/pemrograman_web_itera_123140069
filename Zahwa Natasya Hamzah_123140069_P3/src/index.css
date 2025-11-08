@@ -1,0 +1,358 @@
+/* --- Global Reset & Fonts --- */
+:root {
+  --primary-color: #800000; /* Maroon */
+  --primary-dark: #6a0000;  /* Darker Maroon */
+  --secondary-color: #a0522d; /* Sienna, for contrast */
+  --background-color: #f4f2ee; /* Light warm background */
+  --card-color: #ffffff;
+  --text-color: #333333;
+  --light-text-color: #666666;
+  --border-color: #e0e0e0;
+  --danger-color: #dc3545;
+  --success-color: #28a745;
+  --warning-color: #ffc107;
+  --shadow-light: rgba(0, 0, 0, 0.08);
+  --shadow-medium: rgba(0, 0, 0, 0.12);
+  --font-sans: 'Roboto', 'Helvetica Neue', Arial, sans-serif; /* Menggunakan Roboto */
+}
+
+/* Import Google Font - Roboto */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+/* --- Header & Navigation --- */
+.app-header {
+  background-color: var(--primary-color);
+  padding: 20px 40px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 10px var(--shadow-light);
+  border-radius: 0 0 10px 10px; /* Slightly rounded bottom */
+}
+
+.app-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.app-nav h1 {
+  font-size: 1.8rem;
+  color: white;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.app-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.app-nav a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 500;
+  font-size: 1.05rem;
+  padding: 8px 15px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.app-nav a:hover {
+  background-color: var(--primary-dark);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.app-nav a.active {
+  color: white;
+  background-color: var(--primary-dark);
+  box-shadow: 0 2px 5px var(--shadow-light);
+}
+
+/* --- Utility & Card --- */
+.card {
+  background-color: var(--card-color);
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+  padding: 28px;
+  margin-bottom: 25px;
+  box-shadow: 0 4px 12px var(--shadow-light);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: 25px;
+  color: var(--primary-color);
+  font-weight: 700;
+  text-align: center;
+}
+
+/* --- Form (BookForm) --- */
+.book-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: var(--text-color);
+  font-size: 1rem;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  font-family: var(--font-sans);
+  background-color: #fdfdfd;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(128, 0, 0, 0.2); /* Maroon shadow */
+}
+
+.form-error {
+  color: var(--danger-color);
+  font-size: 0.85rem;
+  margin-top: 6px;
+  font-weight: 500;
+}
+
+.btn {
+  padding: 12px 22px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px var(--shadow-light);
+  min-width: 120px;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px var(--shadow-medium);
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-dark);
+}
+
+/* --- Filter (BookFilter) --- */
+.filter-controls {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+  margin-bottom: 25px;
+}
+
+/* --- Daftar Buku (BookList) --- */
+.book-list {
+  display: grid;
+  gap: 20px;
+}
+
+.book-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 25px;
+  background: #fdfdfd;
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  box-shadow: 0 2px 8px var(--shadow-light);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.book-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px var(--shadow-medium);
+}
+
+.book-item-details h3 {
+  font-size: 1.35rem;
+  color: var(--primary-color);
+  margin-bottom: 5px;
+  font-weight: 600;
+  text-align: left; /* Override card h2 centering */
+}
+
+.book-item-details p {
+  color: var(--light-text-color);
+  font-style: italic;
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.book-item-details .status-badge {
+  display: inline-block;
+  padding: 6px 12px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  border-radius: 20px;
+  text-transform: uppercase;
+  color: white;
+  margin-top: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.status-milik { background-color: var(--success-color); }
+.status-baca { background-color: var(--warning-color); color: #333; }
+.status-beli { background-color: var(--secondary-color); } /* Sienna */
+
+.book-item-actions {
+  display: flex;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.btn-secondary {
+  background-color: #eceff1;
+  color: var(--text-color);
+  box-shadow: 0 2px 6px var(--shadow-light);
+}
+.btn-secondary:hover {
+  background-color: #dde1e5;
+}
+
+.btn-danger {
+  background-color: var(--danger-color);
+  color: white;
+  box-shadow: 0 2px 6px var(--shadow-light);
+}
+.btn-danger:hover {
+  background-color: #c82333;
+}
+
+.empty-list {
+  text-align: center;
+  padding: 50px;
+  color: var(--light-text-color);
+  font-style: italic;
+  font-size: 1.1rem;
+}
+
+/* --- Halaman Stats --- */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 25px;
+  padding: 20px;
+}
+
+.stat-item {
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #fdfdfd;
+  box-shadow: 0 2px 8px var(--shadow-light);
+  border: 1px solid var(--border-color);
+  transition: transform 0.3s ease;
+}
+
+.stat-item:hover {
+  transform: translateY(-5px);
+}
+
+.stat-item .stat-number {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 5px;
+}
+
+.stat-item .stat-label {
+  font-size: 1.05rem;
+  color: var(--light-text-color);
+  font-weight: 500;
+}
+
+/* --- Konfirmasi Modal (Fitur Baru) --- */
+.confirm-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.confirm-modal-content {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px var(--shadow-medium);
+  text-align: center;
+  max-width: 400px;
+  width: 90%;
+}
+
+.confirm-modal-content h3 {
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.confirm-modal-content p {
+  margin-bottom: 25px;
+  color: var(--light-text-color);
+  font-size: 1rem;
+}
+
+.confirm-modal-actions {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
