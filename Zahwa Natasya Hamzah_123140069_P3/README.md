@@ -43,8 +43,9 @@ Pastikan Anda memiliki [Node.js](https://nodejs.org/) (versi LTS).
 Untuk menjalankan aplikasi dalam mode development (pengembangan):
 ```bash
 npm run dev
+```
 
-Aplikasi akan terbuka di browser pada alamat `http://localhost:5173` (atau port lain yang ditampilkan di terminal).
+Aplikasi akan terbuka di browser pada alamat `http://localhost:5173`.
 
 ---
 
