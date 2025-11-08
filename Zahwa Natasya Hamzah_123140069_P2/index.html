@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="welcome-header">
+        <div class="welcome-icon">ZN</div>
+        <div class="welcome-text-container">
+            <h2>Selamat datang, Zahwa!</h2>
+            <p>Atur tugas dan jadwal kuliahmu</p>
+        </div>
+    </header>
+    
+    <main class="dashboard-grid">
+        <section class="widget" id="widget-waktu">
+            <h2>Waktu Saat Ini (Asia/Jakarta)</h2>
+            <div id="waktu-display">
+                <p>Memuat waktu...</p>
+            </div>
+        </section>
+
+        <section class="widget" id="widget-jadwal">
+            <h2>Jadwal Kuliah</h2>
+            <ul id="jadwal-list">
+                </ul>
+        </section>
+
+        <section class="widget" id="widget-tugas">
+            <h2>Daftar Tugas</h2>
+            <form id="tugas-form">
+                <input type="text" id="tugas-input" placeholder="Tugas baru..." required>
+                <button type="submit">Tambah</button>
+            </form>
+            <ul id="tugas-list">
+                </ul>
+        </section>
+
+        <section class="widget" id="widget-catatan">
+            <h2>Catatan Singkat</h2>
+            <textarea id="catatan-area" placeholder="Tulis catatan Anda di sini..."></textarea>
+            <button id="simpan-catatan">Simpan Catatan</button>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
