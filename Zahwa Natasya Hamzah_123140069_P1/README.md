@@ -19,7 +19,7 @@ Aplikasi ini dibuat untuk membantu mahasiswa mengelola aktivitas akademik mereka
 3. Mengedit tugas
 4. Menghapus tugas
 5. Filter dan pencarian tugas
-6. Menampilkan jumlah tugas belum selesai
+6. Menampilkan jumlah tugas belum selesaii
 7. Validasi input form
 ## Penjelasan Teknis
 ### Penyimpanan Data Menggunakan localStorage
