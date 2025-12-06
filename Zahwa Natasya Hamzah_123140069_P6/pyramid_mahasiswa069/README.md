@@ -490,5 +490,3 @@ Setiap error response berisi:
 
 ---
 
-**Dibuat oleh:** Zahwa Natasya Hamzah (123140069)  
-**Tanggal:** 2025
