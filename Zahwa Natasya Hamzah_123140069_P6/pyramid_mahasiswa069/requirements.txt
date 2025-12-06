@@ -1,0 +1,16 @@
+alembic==1.13.0
+plaster==1.1.2
+plaster_pastedeploy==1.0.1
+pyramid==2.0.2
+pyramid_debugtoolbar==4.10.1
+pyramid_jinja2==2.10
+pyramid_retry==2.1.1
+pyramid_tm==2.4.1
+SQLAlchemy==2.0.23
+transaction==4.0
+zope.sqlalchemy==1.7.1
+waitress==2.1.2
+psycopg2-binary==2.9.9
+WebTest==3.1.1
+pytest==7.4.3
+pytest-cov==4.1.0

@@ -1,0 +1,308 @@
+{
+  "info": {
+    "_postman_id": "matakuliah-api-collection",
+    "name": "Matakuliah API Testing",
+    "description": "Collection untuk testing Matakuliah REST API dengan Pyramid + PostgreSQL",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "GET - Semua Matakuliah",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:6543/api/matakuliah",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "6543",
+          "path": [
+            "api",
+            "matakuliah"
+          ]
+        },
+        "description": "Mengambil semua data matakuliah dari database"
+      },
+      "response": []
+    },
+    {
+      "name": "GET - Detail Matakuliah (ID=1)",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:6543/api/matakuliah/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "6543",
+          "path": [
+            "api",
+            "matakuliah",
+            "1"
+          ]
+        },
+        "description": "Mengambil detail matakuliah berdasarkan ID"
+      },
+      "response": []
+    },
+    {
+      "name": "POST - Create Matakuliah Baru",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"kode_mk\": \"IF101\",\n  \"nama_mk\": \"Pemrograman Web\",\n  \"sks\": 3,\n  \"semester\": 2\n}"
+        },
+        "url": {
+          "raw": "http://localhost:6543/api/matakuliah",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "6543",
+          "path": [
+            "api",
+            "matakuliah"
+          ]
+        },
+        "description": "Membuat matakuliah baru dengan data JSON"
+      },
+      "response": []
+    },
+    {
+      "name": "POST - Create Matakuliah 2",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"kode_mk\": \"IF102\",\n  \"nama_mk\": \"Database Management\",\n  \"sks\": 3,\n  \"semester\": 3\n}"
+        },
+        "url": {
+          "raw": "http://localhost:6543/api/matakuliah",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "6543",
+          "path": [
+            "api",
+            "matakuliah"
+          ]
+        },
+        "description": "Membuat matakuliah kedua"
+      },
+      "response": []
+    },
+    {
+      "name": "POST - Create Matakuliah 3",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"kode_mk\": \"IF103\",\n  \"nama_mk\": \"Software Engineering\",\n  \"sks\": 4,\n  \"semester\": 4\n}"
+        },
+        "url": {
+          "raw": "http://localhost:6543/api/matakuliah",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "6543",
+          "path": [
+            "api",
+            "matakuliah"
+          ]
+        },
+        "description": "Membuat matakuliah ketiga"
+      },
+      "response": []
+    },
+    {
+      "name": "PUT - Update Matakuliah (ID=1)",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"nama_mk\": \"Pemrograman Web Lanjut\",\n  \"sks\": 4\n}"
+        },
+        "url": {
+          "raw": "http://localhost:6543/api/matakuliah/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "6543",
+          "path": [
+            "api",
+            "matakuliah",
+            "1"
+          ]
+        },
+        "description": "Update data matakuliah dengan ID tertentu"
+      },
+      "response": []
+    },
+    {
+      "name": "DELETE - Delete Matakuliah (ID=2)",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:6543/api/matakuliah/2",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "6543",
+          "path": [
+            "api",
+            "matakuliah",
+            "2"
+          ]
+        },
+        "description": "Menghapus matakuliah berdasarkan ID"
+      },
+      "response": []
+    },
+    {
+      "name": "POST - Error Test (Missing Field)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"kode_mk\": \"IF104\",\n  \"nama_mk\": \"Test Error\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:6543/api/matakuliah",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "6543",
+          "path": [
+            "api",
+            "matakuliah"
+          ]
+        },
+        "description": "Test error handling ketika field wajib (sks, semester) kosong - Harusnya return 400"
+      },
+      "response": []
+    },
+    {
+      "name": "POST - Duplicate Kode MK (Error 409)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"kode_mk\": \"IF101\",\n  \"nama_mk\": \"Duplicate Test\",\n  \"sks\": 2,\n  \"semester\": 2\n}"
+        },
+        "url": {
+          "raw": "http://localhost:6543/api/matakuliah",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "6543",
+          "path": [
+            "api",
+            "matakuliah"
+          ]
+        },
+        "description": "Test unique constraint - Harusnya return 409 Conflict karena IF101 sudah ada"
+      },
+      "response": []
+    },
+    {
+      "name": "GET - Not Found (ID tidak ada)",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:6543/api/matakuliah/999",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "6543",
+          "path": [
+            "api",
+            "matakuliah",
+            "999"
+          ]
+        },
+        "description": "Test 404 error ketika ID tidak ditemukan"
+      },
+      "response": []
+    }
+  ]
+}
